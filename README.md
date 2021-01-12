@@ -3,7 +3,7 @@
 new scrollCatch(".contents_block", ".nav", {
     button: true,
     easing: "easeOutQuad",
-    duration: 600,
+    duration: 600
 });
 
 - 컨텐츠 블록 클래스 , 네비게이션 클래스, 버튼 활용시 위와같이 객체형태로 사용
