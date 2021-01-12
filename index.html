@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                width: 100%;
+                height: 101vh;
+            }
+            nav {
+                position: fixed;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.5);
+            }
+            nav ul {
+                display: flex;
+                list-style-type: none;
+                justify-content: center;
+                height: 50px;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            nav ul li.active a {
+                color: #fff;
+            }
+
+            @media screen and (max-width: 768px) {
+                div {
+                    width: 100%;
+                    height: 50vh;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul class="nav">
+                <li class="active">
+                    <a href="#" class="anchor_button">sec1</a>
+                </li>
+                <li><a href="#" class="anchor_button">sec2</a></li>
+                <li><a href="#" class="anchor_button">sec3</a></li>
+                <li><a href="#" class="anchor_button">sec4</a></li>
+                <li><a href="#" class="anchor_button">sec5</a></li>
+            </ul>
+        </nav>
+        <div class="visual" style="background: #f0f0f0"></div>
+        <div class="section_01 contents_block" style="background: yellowgreen">
+            123
+        </div>
+        <div class="section_02 contents_block" style="background: gray">
+            456
+        </div>
+        <div class="section_03 contents_block" style="background: black">
+            789
+        </div>
+        <div class="section_04 contents_block" style="background: blue">10</div>
+        <div class="section_05 contents_block" style="background: aqua">12</div>
+
+        <script src="scrollCatch.min.js"></script>
+
+        <script>
+            new scrollCatch(".contents_block", ".nav", {
+                button: true,
+                easing: "easeOutQuad",
+                duration: 600,
+            });
+            // 컨텐츠 블록 클래스 , 네비게이션 클래스
+            // active 클래스로 on off 조절됨
+            // 버튼이 있을시 세번째 인자는 객체로 위와같이 보냄
+            // easing 이 jquery 라이브러리와 결합되있으므로 jquery와 함께사용함
+        </script>
+    </body>
+</html>
